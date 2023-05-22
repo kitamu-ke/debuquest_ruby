@@ -9,12 +9,12 @@ class Q7::Menu
   end
 
   def info
-    "#{name} #{price}円"
+      "#{name} #{price}円 "
   end
 
   def total_price(count)
     total_price = price * count
-    total_price = discount_price(count)
+    total_price += discount_price(count)
     total_price
   end
 
@@ -30,6 +30,6 @@ class Q7::Menu
     def is_discount_day?
       today = Date.today
       # 問題を解いている本日の曜日であればディスカウントの曜日判定になるように修正しましょう
-      false
+      today.tuesday?
     end
 end

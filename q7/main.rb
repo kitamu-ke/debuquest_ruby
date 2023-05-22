@@ -19,7 +19,7 @@ class Q7::Main < Base
 
     puts "--------------"
     puts "メニューの番号を選択してください"
-    input_value = gets.chomp.to_i
+    input_value = gets.chomp.to_i - 1
 
     selected_menu = menus[input_value]
     puts "選択されたメニュー: #{selected_menu.name}"

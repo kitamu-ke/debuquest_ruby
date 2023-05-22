@@ -10,6 +10,6 @@ class Q7::Food < Q7::Menu
   end
 
   def info
-    super
+    "#{name} #{price}円 (#{calorie}kcal)"
   end
 end
